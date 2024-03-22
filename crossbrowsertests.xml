@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- PARALLEL TESTING DONE BELOW , added parallel and thread count, remove parallel , it will become cross browser-->
+<suite name="Suite" thread-count="5"  parallel="tests">
+  <test thread-count="5" name="chrometest">
+  
+  <parameter name="os" value="Windows"/>
+  <parameter name="browser" value="chrome"/>
+  
+    <classes>
+      <class name="testCases.TC_001_RegistrationTest"/>
+    </classes>
+  </test> 
+  
+    <test thread-count="5" name="Test">
+  
+  <parameter name="os" value="Windows"/>
+  <parameter name="browser" value="edge"/>
+  
+    <classes>
+      <class name="testCases.TC_001_RegistrationTest"/>
+    </classes>
+  </test> 
+</suite> <!-- Suite -->
